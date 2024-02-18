@@ -4,7 +4,7 @@ import { MessageContentText } from "openai/resources/beta/threads/messages/messa
 import { NextRequest } from "next/server";
 
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY! ,
+  apiKey: process.env.OPENAI_API_KEY ,
 });
 
 export const runtime = "edge";

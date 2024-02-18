@@ -4,9 +4,9 @@ import { ChangeEvent, FormEvent, useState } from "react";
 
 const roleToColorMap: Record<Message["role"], string> = {
   system: "lightred",
-  user: "white",
+  user: "orange",
   function: "lightblue",
-  assistant: "lightgreen",
+  assistant: "teal",
   data: "",
   tool: ""
 };
