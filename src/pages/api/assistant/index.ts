@@ -53,6 +53,22 @@ export default async function POST(req: NextRequest) {
         ) {
           throw new Error(run.status);
         }
+
+        if (run.status === "completed") {
+          console.log(run.usage);
+        }
+
+        // Storing total usage in local storage
+        // if (run.status === "completed") {
+        //   let storedTotalUsage = localStorage.getItem("totalUsage");
+        //   if(storedTotalUsage === null || storedTotalUsage === undefined || parseInt(storedTotalUsage) === 0) {
+        //     localStorage.setItem("totalUsage", run.usage?.total_tokens.toString() ?? "0");
+        //   }
+        //   else {
+        //     let totalUsage = parseInt(storedTotalUsage) + (run.usage?.total_tokens ?? 0);
+        //     localStorage.setItem("totalUsage", totalUsage.toString());
+        //   }
+        // }
       }
 
       await waitForRun(run);

@@ -92,6 +92,7 @@ export default function Assistant() {
           type="text"
           value={message}
           onChange={handleMessageChange}
+          size={100}
         />
         <button type="submit">Send</button>
       </form>
